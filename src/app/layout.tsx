@@ -4,6 +4,7 @@ import Link from "next/link";
 import "./globals.css";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import Image from "next/image";
 
 
 // million-ignore
@@ -17,7 +18,7 @@ export default function RootLayout({
       <body>
         <div className="p-4 px-5 flex justify-between">
           <div className="flex items-center gap-6">
-            <h1 className="text-lg font-bold">Blank EBook Manager</h1>
+            <Image src="/E-Oasis.svg" width={100} height={30} alt="logo" />
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
