@@ -1,4 +1,5 @@
-import ClassSidebar from "@/components/ClassSidebar"
+"use client"
+import ShelfSidebar from "@/components/ShelfSidebar"
 import FullButton from "@/components/FullButton"
 import { LibraryBookCard } from "@/components/LibraryBookCard"
 import { Button } from "@/components/ui/button"
@@ -9,7 +10,7 @@ const Library = () => {
     return (
         <>
             {/* sidebar of classes */}
-            <ClassSidebar />
+            <ShelfSidebar />
             {/* main content */}
             <div className="col-span-8 grid grid-cols-3 gap-4 md:col-span-7 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9">
                 <LibraryBookCard image='/cover.jpg' name="You Don't Know JS" author="Kyle Simpson" progress="20" type="技术" />

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 export const ReadingBookCard = ({ image, name, author, progress, type }: { image: string, name: string, author: NamedCurve, progress: string, type: string }) => {
     return (
-        <div className="relative p-4 rounded-md shadow-md flex items-start gap-3 overflow-hidden select-none cursor-pointer transition-all hover:scale-105 hover:shadow-lg">
+        <div className="flex-shrink-0 w-96 relative p-4 rounded-md shadow-md flex items-start gap-3 overflow-hidden select-none cursor-pointer transition-all hover:scale-105 hover:shadow-lg">
             <div style={{
                 zIndex: 0,
                 position: 'absolute',

@@ -14,7 +14,16 @@ export default function Home() {
       <div className="py-7">
         {/** 继续阅读 */}
         <h2 className=" pb-5 text-2xl font-semibold">继续阅读</h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="flex gap-4 overflow-x-scroll p-3 rounded-lg">
+          <ReadingBookCard image='/cover.jpg' name="You Don't Know JS" author="Kyle Simpson" progress="20" type="技术" />
+          <ReadingBookCard image='/cover2.webp' name="Educated" author="Tara Westover" progress="50" type="文学" />
+          <ReadingBookCard image='/cover4.jpg' name="临高启明" author="元老院" progress="98" type="文学" />
+          <ReadingBookCard image='/cover.jpg' name="You Don't Know JS" author="Kyle Simpson" progress="20" type="技术" />
+          <ReadingBookCard image='/cover2.webp' name="Educated" author="Tara Westover" progress="50" type="文学" />
+          <ReadingBookCard image='/cover4.jpg' name="临高启明" author="元老院" progress="98" type="文学" />
+          <ReadingBookCard image='/cover.jpg' name="You Don't Know JS" author="Kyle Simpson" progress="20" type="技术" />
+          <ReadingBookCard image='/cover2.webp' name="Educated" author="Tara Westover" progress="50" type="文学" />
+          <ReadingBookCard image='/cover4.jpg' name="临高启明" author="元老院" progress="98" type="文学" />
           <ReadingBookCard image='/cover.jpg' name="You Don't Know JS" author="Kyle Simpson" progress="20" type="技术" />
           <ReadingBookCard image='/cover2.webp' name="Educated" author="Tara Westover" progress="50" type="文学" />
           <ReadingBookCard image='/cover4.jpg' name="临高启明" author="元老院" progress="98" type="文学" />
@@ -23,7 +32,7 @@ export default function Home() {
       <div className="py-7">
         {/** 继续阅读 */}
         <h2 className=" pb-5 text-2xl font-semibold items-center flex">之前读过<ChevronRight className=" inline-block opacity-60" /></h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="flex gap-4 overflow-x-scroll p-3 rounded-lg">
           <FinishedBookCard image='/cover3.jpg' name="OVERLORD (15) 半森林精靈的神人 上" author="丸山くがね" progress="99" type="轻小说" />
           <FinishedBookCard image='/cover4.jpg' name="临高启明" author="元老院" progress="98" type="文学" />
         </div>

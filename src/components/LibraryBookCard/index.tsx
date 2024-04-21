@@ -6,6 +6,7 @@ import { Skeleton } from '../ui/skeleton'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '../ui/sheet'
 import { Button } from '../ui/button'
 import { BookMarked } from 'lucide-react'
+
 export const LibraryBookCard = ({ image, name, author, progress, type }: { image: string, name: string, author: NamedCurve, progress: string, type: string }) => {
     const [hover, setHover] = useState(false)
     return (

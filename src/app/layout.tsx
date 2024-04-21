@@ -3,8 +3,10 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuL
 import Link from "next/link";
 import "./globals.css";
 import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
+import { LogOut, Search, UsersRound } from "lucide-react";
 import Image from "next/image";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 
 
 // million-ignore
@@ -35,16 +37,22 @@ export default function RootLayout({
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="/search" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                      搜索
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <Avatar>
+                <AvatarImage src="https://github.com/maxtunelee.png?size=40" />
+                <AvatarFallback>Max</AvatarFallback>
+              </Avatar>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="*:cursor-pointer">
+              <DropdownMenuItem><UsersRound className="mr-2 w-4 h-4" />用户管理</DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem className="text-red-500"><LogOut className="mr-2 w-4 h-4" /> 退出登录</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
         {children}
       </body>
