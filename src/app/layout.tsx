@@ -1,13 +1,25 @@
-"use client"
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+"use client";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import "./globals.css";
 import { Input } from "@/components/ui/input";
 import { LogOut, Search, UsersRound } from "lucide-react";
 import Image from "next/image";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from "@/components/ui/dropdown-menu";
-
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 // million-ignore
 export default function RootLayout({
@@ -25,14 +37,18 @@ export default function RootLayout({
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <Link href="/" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
                       主页
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link href="/library" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
                       书库
                     </NavigationMenuLink>
                   </Link>
@@ -48,9 +64,16 @@ export default function RootLayout({
               </Avatar>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="*:cursor-pointer">
-              <DropdownMenuItem><UsersRound className="mr-2 w-4 h-4" />用户管理</DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/admin/users">
+                  <UsersRound className="mr-2 w-4 h-4" />
+                  用户管理
+                </Link>
+              </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem className="text-red-500"><LogOut className="mr-2 w-4 h-4" /> 退出登录</DropdownMenuItem>
+              <DropdownMenuItem className="text-red-500">
+                <LogOut className="mr-2 w-4 h-4" /> 退出登录
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
